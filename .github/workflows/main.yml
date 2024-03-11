@@ -112,7 +112,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            export PATH=$PATH:/home/noteforecast/.nvm/versions/node/v18.16.0/bin/pm2
             cd ${{ secrets.SSH_PATH_PROD }}
-            pm2 reload app
+            /home/noteforecast/.nvm/versions/node/v18.16.0/bin/pm2 reload app
+            /home/noteforecast/.nvm/versions/node/v18.16.0/bin/pm2 show app
             pm2 show app
