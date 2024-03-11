@@ -112,7 +112,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            sudo su
+            whoami
             cd ${{ secrets.SSH_PATH_PROD }}
             pm2 reload app
             pm2 show app
