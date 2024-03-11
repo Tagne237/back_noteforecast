@@ -113,5 +113,5 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
-            pm2 reload app.js
+            pm2 reload app
             pm2 show app
