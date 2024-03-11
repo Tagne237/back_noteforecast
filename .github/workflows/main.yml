@@ -114,6 +114,5 @@ jobs:
           script: |
             export PATH=$PATH:/home/noteforecast/.nvm/versions/node/v18.16.0/bin/pm2
             cd ${{ secrets.SSH_PATH_PROD }}
-            export 
             pm2 reload app
             pm2 show app
