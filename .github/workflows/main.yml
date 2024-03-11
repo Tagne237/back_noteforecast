@@ -49,7 +49,7 @@ jobs:
       - name: Install dependencies and run tests
         run: |
           npm install
-          npm install -g pm2
+          # npm install -g pm2
           # npm test
 
   create-deployment-artefacts:
@@ -113,5 +113,5 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
-            pm2 reload app
+            pm2 reload app.js
             pm2 show app
