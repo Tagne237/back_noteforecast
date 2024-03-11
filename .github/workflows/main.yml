@@ -108,7 +108,7 @@ jobs:
           host: ${{ secrets.SSH_HOST_PROD }}
           username: ${{ secrets.SSH_USER_PROD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 63489
+          port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
             pm2 reload app
