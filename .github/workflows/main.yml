@@ -113,6 +113,6 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
-            # echo "${{ secrets.SSH_PASSWORD_PROD }}" | sudo -S env "PATH=$PATH" pm2 reload app
-            # env "PATH=$PATH" /home/noteforecast/.nvm/versions/node/v18.16.0/bin/pm2 status
-            # sudo -S env "PATH=$PATH" pm2 start show app
+            sudo pm2 start npm --name app -- run start -- -p 3000
+            sudo pm2 reload app
+            w pm2 show app
