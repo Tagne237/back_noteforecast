@@ -109,7 +109,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST_PROD }}
           username: ${{ secrets.SSH_USER_PROD }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD_PROD }}
           port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
