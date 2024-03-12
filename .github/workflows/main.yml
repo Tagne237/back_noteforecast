@@ -113,6 +113,5 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.SSH_PATH_PROD }}
-            env "PATH=$PATH" pm2 start reload app
-            sudo env "PATH=$PATH" pm2 start show app
-            pm2 show app
+            env "PATH=$PATH" pm2 reload app
+            sudo -s env "PATH=$PATH" pm2 start show app
